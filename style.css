@@ -3,7 +3,7 @@
 }
 
 .tabuleiro { 
-    background-color: palevioletred;
+    background-color: rgb(139, 110, 243);
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     width: calc(7 * 25px);
@@ -11,16 +11,21 @@
 }
 
 .disco{
-    background: radial-gradient( circle at top, white, rgb(255, 0, 200));
+    background: transparent;
     width: 100%;
     aspect-ratio: 1/1;
     height: 100%;
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 50%;
 }
 
 .disco[data-cor = "preto"]{
     background: radial-gradient(circle at top, white, black);
+    border: 1px solid white;
+}
+.disco[data-cor = "branco"]{
+    background: radial-gradient(circle at top, rgb(0, 0, 0), rgb(255, 255, 255));
+    border: 1px solid black;
 }
 
 .disco[data-posicao = "0"]{
